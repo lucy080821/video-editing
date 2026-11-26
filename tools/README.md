@@ -11,10 +11,11 @@ npm init -y
 npm i @fontsource/anton @fontsource/be-vietnam-pro @fontsource/patrick-hand @fontsource/noto-serif @fontsource/montserrat
 ```
 
-Lấy thêm 2 file từ trang duyệt bài bằng Artifact action "read" (url https://claude.ai/artifact/VekikoEQENpQVU8UhA23Ve):
+Chép thêm intro và logo từ repo:
 
-- path `tools/reel/logo.png`, lưu thành `~/doc/logo.png`;
-- path `c27c776c8b24172c05ff3db50376d236`, là intro 13 giây, lưu thành `~/doc/intro.mp4`.
+```bash
+cp assets/logo.png ~/doc/logo.png && cp assets/intro-13s.mp4 ~/doc/intro.mp4
+```
 
 ## Quy trình
 
@@ -22,9 +23,9 @@ Lấy thêm 2 file từ trang duyệt bài bằng Artifact action "read" (url ht
 2. `python3 doc_media.py doc_script.json out` tạo giọng đọc (voice và model cố định), nhạc nền và cảnh quay tư liệu Pixabay cho các cảnh `stock`.
 3. `python3 timeline.py doc_script.json out` tạo dòng thời gian, phụ đề, mục lục và bản trộn âm thanh `mix.m4a`. Sau đó chạy `python3 prep_stock.py` để tách khung hình cho các cảnh `stock`.
 4. Kiểm tra thử: `node render.js out still t1,t2,...` để chụp vài khung hình rồi xem.
-5. Dựng thật: `node render.js out 4` (4 luồng, khoảng 25 phút cho 12 phút video). Sau đó ghép các phần, ghép âm thanh và ghép intro, theo lệnh trong meta/introrule.
-6. Tạo bản xem trước dưới 15 MB, tạo thumbnail từ `thumb.html`, rồi chạy `build_doc.py` để có SEO 3 nền tảng và document lưu vào trang duyệt bài.
+5. Dựng thật: `node render.js out 4` (4 luồng, khoảng 25 phút cho 12 phút video). Sau đó ghép các phần, ghép âm thanh và ghép intro, theo lệnh trong `data/introrule.json`.
+6. Tạo bản xem trước dưới 15 MB, tạo thumbnail từ `thumb.html`, rồi chạy `build_doc.py` để có SEO 3 nền tảng. Phần `build_doc.py` ghi document cho trang duyệt bài giờ không cần nữa; chỉ dùng phần tạo `seo_3_nen_tang.txt`.
 
 ## Reel (khung dọc 1080×1920)
 
-Viết lại `stage.html` theo khổ dọc và theo meta/reelstyle, mục diversity. Mỗi reel phải dùng một bộ hình mới, không lặp lại reel trước.
+Viết lại `stage.html` theo khổ dọc và theo `data/reelstyle.json`, mục diversity. Mỗi reel phải dùng một bộ hình mới, không lặp lại reel trước.

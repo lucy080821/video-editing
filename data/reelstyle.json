@@ -1,0 +1,256 @@
+{
+ "decidedAt": "2026-11-01",
+ "decidedBy": "anh Tuấn",
+ "diversity": {
+  "decidedAt": "2026-11-10",
+  "decidedBy": "anh Tuấn",
+  "keep": [
+   "Giọng đọc, model, tốc độ giọng cố định",
+   "Hook nêu từ khóa chính + lỗi sai trong 3 giây đầu, không bịa số liệu",
+   "Phụ đề to dễ đọc, logo nhỏ ở góc, SFX ở mọi chuyển cảnh/highlight/chuyển động",
+   "Thumbnail Shorts, SEO 3 nền tảng, nội dung chính xác"
+  ],
+  "rules": [
+   "KHÔNG dùng lại nguyên khuôn vox.html/vox_build.py của reel trước rồi chỉ thay chữ. voxTemplate/voxBuild chỉ là điểm xuất phát kỹ thuật (render HTML → Playwright → ffmpeg, đồng bộ giọng/phụ đề/SFX); mỗi reel phải thiết kế lại cảnh, bố cục và chuyển động cho hợp chủ đề.",
+   "So sánh với trường \"visual\" của 5 reel gần nhất trong posts: KHÔNG lặp lại cùng bộ (nền + bảng màu), cùng dạng kể chuyện, cùng kiểu hook, cùng thể loại nhạc. Reel đầu tiên áp dụng (chưa có visual) thì phải khác rõ nền giấy kem + bút dạ vàng + thanh nhịp của các reel Vox trước.",
+   "Bộ hình (chọn 1, xoay vòng): giấy kem + bút dạ (Vox cũ); bảng phấn xanh đen + chữ phấn; vở kẻ ô/kẻ dòng + bút bi đỏ chấm bài; bảng trắng + bút lông nhiều màu; nền tối neon; bản vẽ kỹ thuật blueprint; bảng ghim giấy note dán; giao diện điện thoại/tin nhắn chat; phong cách tờ đề thi trắc nghiệm; truyện tranh khung + bong bóng thoại; bản đồ/hành trình; màn hình game/quiz show. Có thể tự nghĩ thêm.",
+   "Dạng kể chuyện (chọn 1, xoay vòng; số cảnh 7–14, thứ tự tự do, không cố định 11 cảnh): lỗi → sửa; đố trước giải sau (quiz đếm ngược 3-2-1); hội thoại 2 nhân vật (bong bóng chat hoặc nhân vật SVG); trước/sau (before → after); top 3 lỗi đếm ngược; một câu biến hình qua từng bước (chữ trượt sang vị trí mới, hợp dạng viết lại câu); thử thách 5 giây; giải phẫu một câu (zoom vào từng phần, nhãn chú thích); mini game đúng/sai.",
+   "Animation: mỗi reel dùng ÍT NHẤT 5 kiểu chuyển động khác nhau, và ít nhất 2 kiểu chưa dùng ở reel ngay trước. Kho gợi ý: chữ gõ máy; kinetic typography bật từng từ; chữ trượt/morph đổi vị trí; lật thẻ 3D; zoom xuyên vào từ; gạch bỏ vẽ tay; mũi tên vẽ nối hai từ; con dấu SAI/ĐÚNG đóng xuống; rung khi sai, pháo giấy khi đúng; đồng hồ đếm ngược; checklist tick; giấy note rơi/dán; camera lia trên một canvas dài (pan/parallax); chia đôi màn hình wipe; hiệu ứng lật trang; glitch; vết mực loang; thanh tiến độ; đường thời gian (timeline) cho các thì; sơ đồ khẩu hình miệng/lưỡi cho phát âm.",
+   "Hình ảnh: mỗi reel có ít nhất 3 hình minh họa thật sự (không chỉ chữ): icon/hình vẽ SVG tự vẽ hợp câu ví dụ (mưa, trường học, người bệnh...), nhân vật SVG đơn giản, ảnh hoặc clip Pixabay hợp câu ví dụ (làm nền mờ, khung polaroid, hình cắt), sơ đồ/biểu đồ. Không dùng hình của thương hiệu hay nhân vật có bản quyền.",
+   "Chuyển cảnh: dùng ít nhất 3 kiểu khác nhau trong một reel (whip pan, wipe, zoom through, page turn, ink splash, glitch, slide stack...), kèm SFX tương ứng.",
+   "Màu và chữ: mỗi bộ hình có bảng màu riêng (vẫn giữ màu vàng #F2B705 làm điểm nhấn thương hiệu ở logo/thumbnail nếu hợp). Được cài thêm font @fontsource có bộ chữ vietnamese (vd Nunito, Baloo 2, Patrick Hand, Lexend) và PHẢI kiểm tra dấu tiếng Việt hiển thị đúng.",
+   "Nhạc: music_prompt đổi thể loại mỗi reel (lo-fi, ukulele vui, marimba, synth pop, funk bass, piano nhẹ, chiptune game, jazz brush...), không trùng 5 reel gần nhất. SFX cũng đa dạng, không dùng một bộ âm cho mọi reel.",
+   "Nhịp: đổi nhịp cắt cảnh theo dạng kể chuyện (có reel dồn dập 1–2 giây/cảnh, có reel giữ một cảnh lớn rồi zoom/lia), luôn có ít nhất 1 khoảnh khắc 'bất ngờ' thị giác giữa reel để giữ người xem.",
+   "Kiểm tra trước khi tải lên: xem khung hình mỗi 2 giây; tự hỏi 'nếu tắt tiếng và che chữ, reel này có trông khác reel hôm trước không?' — nếu không, làm lại.",
+   "Ghi vào document reel trường \"visual\": {\"kit\":\"bộ hình\",\"palette\":[\"#…\"],\"format\":\"dạng kể chuyện\",\"hook\":\"kiểu hook hình ảnh\",\"animations\":[\"…\"],\"transitions\":[\"…\"],\"images\":[\"…\"],\"fonts\":[\"…\"],\"music\":\"thể loại\",\"scenes\":n} để lần sau so sánh."
+  ],
+  "why": "Anh Tuấn nhận xét: các reel đang giữ nguyên một khuôn rồi chỉ thay nội dung. Từ 11/11/2026 mỗi reel phải ĐA DẠNG animation, hình ảnh, bố cục, nhịp, nhạc, mọi thứ."
+ },
+ "howTo": [
+  "Lấy voxTemplate và voxBuild bên dưới (hoặc từ posts/2026-11-02-vox), lưu thành ~/reel/vox/vox.html và vox_build.py; chép logo.png vào ~/reel/vox/",
+  "Viết script.json theo mẫu posts/2026-11-02-vox (các loại cảnh: hook, bars, rule, chips, weakcards, checks, tip, list, cta1, cta2, end); các loại cảnh có thể mở rộng, cần sửa vox.html cho nội dung không phải trọng âm",
+  "fetch_media.py từ ~/reel (giọng và model cố định), rồi make_srt.py, rồi vox_build.py script.json out (thêm 'preview' để xem trước)",
+  "Dùng /usr/bin/python3 (có sẵn playwright, requests); python3 mặc định có thể thiếu thư viện",
+  "Kiểm tra khung hình mỗi 2 giây trước khi tải lên"
+ ],
+ "knownIssues": [
+  "Nhãn các từ nhấn trong cảnh thanh nhịp còn hơi nhỏ trên điện thoại",
+  "Cảnh bars/chips/weakcards được viết cho chủ đề trọng âm và từ chức năng; chủ đề khác cần cảnh mới"
+ ],
+ "rule": "Từ nay mọi reel làm theo phong cách Vox (nền giấy kem, bút dạ vàng quét chữ, gạch chân/khoanh tròn vẽ tay, thanh nhịp, phụ đề to tô từng từ, logo nhỏ ở góc). Không dùng khuôn tools/reel/reel.html nữa. Không dùng logo, nhạc hay cảnh của Vox, chỉ học phong cách. Thêm style:\"vox\" vào document reel. TÊN FILE CHUẨN SEO (anh Tuấn chốt 12/11/2026, BẮT BUỘC): mọi file video reel/short, phụ đề và thumbnail khi tạo xong phải đặt tên chứa từ khóa chính, viết không dấu, chữ thường, nối bằng gạch ngang, có thể thêm hậu tố loại file; vd từ khóa \"viết lại câu với must\" → viet-lai-cau-voi-must-short.mp4, viet-lai-cau-voi-must-short.srt, viet-lai-cau-voi-must-thumbnail.png. KHÔNG dùng tên chung chung như reel.mp4, video.mp4, thumbnail.png, subtitles.srt hay chỉ có ngày. Đổi tên file TRƯỚC khi tải lên trang duyệt (asset) và trước khi gửi bằng SendUserFile; ghi đúng tên này vào trường filename của document. CẤM DÙNG TÊN \"LAN\" (anh Tuấn chốt 25/11/2026, BẮT BUỘC, KHÔNG có ngoại lệ): mọi reel, video, thumbnail, phụ đề, caption, mô tả SEO, câu ví dụ, câu luyện tập, đáp án, nhân vật SVG/hội thoại đều KHÔNG được dùng tên \"Lan\" (kể cả Mrs Lan, Ms Lan, chị Lan…). Dùng tên khác (vd Mai, Nam, Vy, Linh, Minh, Hoa, Tom, Anna). Trước khi tải lên phải tìm chữ \"Lan\" trong kịch bản, phụ đề, SEO và chữ trên hình; nếu có thì sửa và dựng lại.",
+ "sampleScript": {
+  "end": "Chỉ cần nhấn đúng từ",
+  "id": "2026-11-02-vox",
+  "music_prompt": "Light explainer background music for a short educational video, pizzicato strings and soft percussion ticks, playful and curious, steady tempo around 100 BPM, no vocals, minimal and quiet",
+  "scenes": [
+   {
+    "a": "Trọng âm câu",
+    "b": "Đừng đọc",
+    "c": "đều từng chữ",
+    "t": "hook",
+    "vo": "Trọng âm câu tiếng Anh! Đừng đọc đều từng chữ nữa nha!"
+   },
+   {
+    "kicker": "THÓI QUEN CŨ",
+    "mode": "flat",
+    "t": "bars",
+    "vo": "Mình hay quen đọc mỗi chữ một nhịp."
+   },
+   {
+    "kicker": "THÓI QUEN CŨ",
+    "mode": "robot",
+    "t": "bars",
+    "vo": "Nên câu We're going to the market for fruit nghe cứng như robot."
+   },
+   {
+    "kicker": "NGƯỜI BẢN XỨ",
+    "mode": "stress",
+    "t": "bars",
+    "vo": "Người bản xứ thì khác. Họ chỉ nhấn going, market và fruit."
+   },
+   {
+    "kicker": "NGƯỜI BẢN XỨ",
+    "mode": "weak",
+    "t": "bars",
+    "vo": "Các từ còn lại đọc lướt rất nhẹ, thấp và nhanh."
+   },
+   {
+    "a": "từ nội dung",
+    "b": "từ chức năng",
+    "kicker": "QUY TẮC",
+    "t": "rule",
+    "vo": "Quy tắc là: từ nội dung thì nhấn, từ chức năng thì đọc yếu."
+   },
+   {
+    "items": [
+     {
+      "at": "danh từ",
+      "en": "market",
+      "vi": "DANH TỪ"
+     },
+     {
+      "at": "động từ chính",
+      "en": "going",
+      "vi": "ĐỘNG TỪ CHÍNH"
+     },
+     {
+      "at": "tính từ",
+      "en": "big",
+      "vi": "TÍNH TỪ"
+     },
+     {
+      "at": "trạng từ",
+      "en": "quickly",
+      "vi": "TRẠNG TỪ"
+     }
+    ],
+    "kicker": "TỪ NỘI DUNG · NHẤN",
+    "t": "chips",
+    "vo": "Từ nội dung gồm danh từ, động từ chính, tính từ và trạng từ.",
+    "weak": false
+   },
+   {
+    "items": [
+     {
+      "at": "to,",
+      "en": "to",
+      "vi": "GIỚI TỪ"
+     },
+     {
+      "at": "the,",
+      "en": "the",
+      "vi": "MẠO TỪ"
+     },
+     {
+      "at": "for,",
+      "en": "for",
+      "vi": "GIỚI TỪ"
+     },
+     {
+      "at": "a.",
+      "en": "a",
+      "vi": "MẠO TỪ"
+     }
+    ],
+    "kicker": "TỪ CHỨC NĂNG · YẾU",
+    "t": "chips",
+    "vo": "Từ chức năng thì như to, the, for, a.",
+    "weak": true
+   },
+   {
+    "items": [
+     {
+      "at": "To đọc",
+      "ipa": "/tə/",
+      "w": "to"
+     },
+     {
+      "at": "the là",
+      "ipa": "/ðə/",
+      "w": "the"
+     },
+     {
+      "at": "for là",
+      "ipa": "/fə/",
+      "w": "for"
+     }
+    ],
+    "kicker": "DẠNG YẾU (WEAK FORM)",
+    "t": "weakcards",
+    "vo": "To đọc nhẹ là tờ, the là đờ, for là phờ."
+   },
+   {
+    "kicker": "SAI / ĐÚNG",
+    "rows": [
+     {
+      "at": "Sai",
+      "ok": false
+     },
+     {
+      "at": "Đúng",
+      "ok": true
+     }
+    ],
+    "t": "checks",
+    "vo": "Sai là nhấn đều mọi chữ. Đúng là chỉ nhấn going, market, fruit."
+   },
+   {
+    "at": "gõ ngón tay",
+    "kicker": "MẸO NHỚ",
+    "t": "tip",
+    "vo": "Mẹo nhớ: vừa nghe vừa gõ ngón tay xuống bàn mỗi khi gặp từ nhấn."
+   },
+   {
+    "items": [
+     {
+      "at": "Một",
+      "text": "Gạch chân từ nội dung"
+     },
+     {
+      "at": "Hai",
+      "text": "Đọc yếu từ chức năng"
+     },
+     {
+      "at": "Ba,",
+      "text": "Đọc to theo nhịp gõ"
+     }
+    ],
+    "kicker": "LUYỆN 3 BƯỚC",
+    "t": "list",
+    "vo": "Luyện ba bước. Một, gạch chân từ nội dung. Hai, đọc yếu từ chức năng. Ba, đọc to theo nhịp gõ."
+   },
+   {
+    "kicker": "BÀI TẬP",
+    "sentence": [
+     "I",
+     "can",
+     "see",
+     "a",
+     "big",
+     "dog",
+     "in",
+     "the",
+     "park."
+    ],
+    "t": "cta1",
+    "vo": "Bạn thử nha: I can see a big dog in the park. Bạn sẽ nhấn những từ nào?"
+   },
+   {
+    "at": "xem video",
+    "kicker": "BÀI TẬP",
+    "sub": "Video đầy đủ trên kênh",
+    "t": "cta2",
+    "text": "Đáp án ở phần bình luận",
+    "vo": "Viết đáp án dưới phần bình luận nhé! Muốn hiểu vì sao nghe tiếng Anh không ra, xem video đầy đủ trên kênh nha!"
+   },
+   {
+    "t": "end",
+    "vo": "Học tiếng Anh không khó, chỉ cần nhấn đúng từ!"
+   }
+  ],
+  "title": "Trọng âm câu tiếng Anh: nhấn từ nội dung, đọc yếu từ chức năng",
+  "words": [
+   "We're",
+   "going",
+   "to",
+   "the",
+   "market",
+   "for",
+   "fruit"
+  ]
+ },
+ "style": "vox",
+ "voxAll": {
+  "check": "Trước khi tải lên: xem khung hình mỗi 2–3 giây và kiểm tra có SFX ở từng chuyển cảnh/highlight/chuyển động (liệt kê mốc SFX vào reel_meta/video_meta); xem thumbnail reel bằng Read.",
+  "decidedAt": "2026-11-03",
+  "decidedBy": "anh Tuấn",
+  "hook": "Hook phải CỰC MẠNH để tăng view YouTube: 3 giây đầu (reel) / 15 giây đầu (video dài) nêu thẳng từ khóa chính + một lỗi sai hoặc nghịch lý gây tò mò, chữ hook to, chuyển động mạnh, có SFX nhấn; không chào hỏi, không giới thiệu kênh, không bịa số liệu. Title YouTube và thumbnail đi cùng hook.",
+  "reelThumbnail": "BẮT BUỘC (anh Tuấn yêu cầu 3/11/2026): mỗi reel/short làm thêm 1 thumbnail dạng ảnh PNG để anh tải về đặt làm ảnh bìa Shorts. Kích thước dọc 1080×1920, phong cách Vox giống reel (nền giấy kem, bút dạ vàng, khoanh tròn/gạch chân vẽ tay, logo nhỏ ở góc), chữ hook CỰC MẠNH theo tiêu đề reel, to, đọc rõ trên điện thoại, có từ khóa chính; nội dung chính nằm trong vùng giữa an toàn (tránh mép trên/dưới bị giao diện che). Render bằng Playwright từ HTML (có thể thêm cảnh 'thumb' vào vox.html), xem lại bằng Read, tải lên trang duyệt (Artifact publish asset: true) và ghi vào document reel trường images: [{\"platform\":\"youtube-shorts\",\"kind\":\"thumbnail\",\"assetId\":\"…\",\"filename\":\"<doc_id>-short-thumbnail.png\",\"alt\":\"…\"}]; gửi kèm file PNG qua SendUserFile cùng video.",
+  "rule": "Từ 3/11/2026, TẤT CẢ reel/short VÀ video dài đều làm dạng Vox-style video (nền giấy kem, bút dạ vàng quét chữ, gạch chân/khoanh tròn vẽ tay, chữ và hình chuyển động, phụ đề to tô từng từ, logo nhỏ ở góc). Không dùng khuôn cũ tools/reel/reel.html hay khuôn tài liệu tools/doc/doc.html nữa. Không dùng logo, nhạc hay cảnh của Vox, chỉ học phong cách.",
+  "sfx": "LUÔN có SFX ở MỌI đoạn transition (chuyển cảnh/chuyển phần: whoosh/swipe), MỌI highlight (bút dạ quét chữ, gạch chân, khoanh tròn: marker/scribble/ding) và MỌI hiệu ứng chuyển động (chữ/thẻ bật vào: pop/click/tick), cả câu sai/đúng (buzz/ding). Tạo SFX bằng ElevenLabs Sound Effects (EL_KEY) cho đa dạng, đánh dấu trong kịch bản dạng [SFX: ...] đúng dòng; nếu API lỗi hoặc hết hạn mức thì tự tổng hợp bằng ffmpeg/numpy. Âm lượng nhỏ hơn giọng đọc, khớp đúng khung hình. voxBuild của reel hiện CHƯA có SFX: phải bổ sung trước khi dựng.",
+  "templates": "Reel: voxTemplate + voxBuild trong meta/reelstyle (mẫu posts/2026-11-02-vox). Video dài: voxTemplateLong + scriptJson trong posts/2026-11-02-video. Ghi style:\"vox\" vào document."
+ },
+ "voxBuild": "import asyncio, base64, json, os, pathlib, re, subprocess, sys\nfrom playwright.async_api import async_playwright\nFPS=30; HERE=pathlib.Path(__file__).resolve().parent; NM=HERE.parent/'node_modules/@fontsource'\nSPEED=float(os.environ.get('SPEED','1.25'))\nFONTS=[('Noto Serif','noto-serif',(600,700,800)),('Montserrat','montserrat',(500,700,800,900)),('Anton','anton',(400,)),('Be Vietnam Pro','be-vietnam-pro',(600,700,800))]\ndef faces():\n    o=''\n    for fam,d,ws in FONTS:\n        for w in ws:\n            for sub in ('latin','latin-ext','vietnamese'):\n                f=NM/d/'files'/f'{d}-{sub}-{w}-normal.woff2'\n                if f.exists(): o+=f\"@font-face{{font-family:'{fam}';font-weight:{w};src:url('file://{f}') format('woff2');}}\"\n    return o\ndef ff(a): subprocess.run(['ffmpeg','-v','error','-y']+a,check=True)\ndef prep(sc,out):\n    al=json.load(open(out/'alignment.json')); st=[x/SPEED for x in al['character_start_times_seconds']]; en=[x/SPEED for x in al['character_end_times_seconds']]\n    text=' '.join(s['vo'] for s in sc['scenes']); assert ''.join(al['characters'])==text,'alignment text differs'\n    offs=[];o=0\n    for s in sc['scenes']: offs.append(o); o+=len(s['vo'])+1\n    total=en[-1]+1.4\n    for i,s in enumerate(sc['scenes']):\n        s['start']=0.0 if i==0 else st[offs[i]]-0.08\n        s['end']=st[offs[i+1]]-0.08 if i+1<len(offs) else total\n        v=s['vo']\n        def at(ph,frm=0):\n            k=v.lower().find(ph.lower(),frm); \n            if k<0: print('MISSING',i,ph); return s['start'],frm\n            return st[offs[i]+k],k+len(ph)\n        def seq(words,base=0):\n            res=[];p=base\n            for w in words:\n                t,p=at(w,p);res.append(t)\n            return res\n        T={}; m=s.get('mode')\n        if s['t']=='hook': T['b']=at(s['b'])[0]; T['c']=at(s['c'])[0]\n        if s['t']=='bars':\n            if m=='robot': T['w']=seq(sc['words'],v.find(\"We're\")); T['r']=at('robot')[0]\n            if m=='stress':\n                for k,w in ((1,'going'),(4,'market'),(6,'fruit')): T[f'n{k}']=at(w)[0]\n            if m=='weak': T['f']=at('đọc lướt')[0]\n        if s['t']=='rule': T['a']=at(s['a'])[0]; T['b']=at(s['b'])[0]\n        if s['t'] in('chips','weakcards','list'): T['i']=[at(it['at'])[0] for it in s['items']]\n        if s['t']=='checks': T['r']=[at(r['at'])[0] for r in s['rows']]\n        if s['t']=='tip': T['a']=at(s['at'])[0]\n        if s['t']=='cta1': T['w']=seq(s['sentence'],v.find('I can see')); T['q']=at('nhấn những')[0]\n        if s['t']=='cta2': T['s']=at(s['at'])[0]\n        s['times']=T\n    # subtitle cues with word timing (same grouping as make_srt.py)\n    r=(len(st)-1)/max(1,len(text)-1); S=lambda i:st[min(len(st)-1,round(i*r))]; E=lambda i:en[min(len(en)-1,round(i*r))]\n    words=[(m.start(),m.end(),m.group()) for m in re.finditer(r'\\S+',text)]\n    cues=[];cur=[]\n    for k,w in enumerate(words):\n        cur.append(w); line=' '.join(x[2] for x in cur); nxt=words[k+1][2] if k+1<len(words) else ''\n        if (not nxt or len(line)+1+len(nxt)>42 or (w[2][-1] in '.?!' and len(line)>=8) or (w[2][-1] in ',;:' and len(line)>=24)):\n            cues.append(cur);cur=[]\n    sc['cues']=[{'s':S(c[0][0]),'e':E(c[-1][1]-1)+.2,'w':[{'t':x[2],'s':S(x[0]),'e':E(x[1]-1)} for x in c]} for c in cues]\n    return total\nasync def main(spec,outdir):\n    sc=json.load(open(spec,encoding='utf-8')); out=pathlib.Path(outdir).resolve(); total=prep(sc,out)\n    sc['logo']='data:image/png;base64,'+base64.b64encode(open(HERE/'logo.png','rb').read()).decode()\n    html=(HERE/'vox.html').read_text(encoding='utf-8').replace('/*FONTS*/',faces()).replace('/*DATA*/{}',json.dumps(sc,ensure_ascii=False))\n    pf=out/'_vox.html'; pf.write_text(html,encoding='utf-8')\n    mode=sys.argv[3] if len(sys.argv)>3 else ''\n    async with async_playwright() as p:\n        b=await p.chromium.launch(executable_path='/opt/pw-browsers/chromium' if os.path.exists('/opt/pw-browsers/chromium') else None)\n        pg=await b.new_page(viewport={'width':1080,'height':1920}); await pg.goto(pf.as_uri())\n        await pg.evaluate('Promise.all([...document.fonts].map(f=>f.load())).then(()=>document.fonts.ready)')\n        if mode=='preview':\n            for i,s in enumerate(sc['scenes']):\n                for j,fr in enumerate((.35,.9)):\n                    await pg.evaluate(f'render({i},{s[\"start\"]+(s[\"end\"]-s[\"start\"])*fr})'); await pg.screenshot(path=str(out/f'pv_{i:02d}_{j}.jpg'),type='jpeg',quality=80)\n            await b.close(); print('total',total); return\n        silent=out/'video_silent.mp4'\n        proc=subprocess.Popen(['ffmpeg','-v','error','-y','-f','image2pipe','-framerate',str(FPS),'-i','-','-c:v','libx264','-pix_fmt','yuv420p','-crf','20',str(silent)],stdin=subprocess.PIPE)\n        n=round(total*FPS); si=0\n        for f in range(n):\n            t=f/FPS\n            while si+1<len(sc['scenes']) and t>=sc['scenes'][si+1]['start']: si+=1\n            await pg.evaluate(f'render({si},{t})'); proc.stdin.write(await pg.screenshot(type='jpeg',quality=90))\n        proc.stdin.close(); proc.wait(); await b.close()\n    voice=out/'voice.mp3'; fast=out/'voice_fast.mp3'; ff(['-i',str(voice),'-filter:a',f'atempo={SPEED:.4f}',str(fast)])\n    music=out/'music.mp3'; ins=['-i',str(silent),'-i',str(fast)]\n    if music.exists():\n        ins+=['-stream_loop','-1','-i',str(music)]; fc=f'[2:a]volume=0.14,afade=t=out:st={total-1.5:.2f}:d=1.5[m];[1:a]apad[v];[v][m]amix=inputs=2:duration=first:normalize=0[a]'\n    else: fc='[1:a]apad[a]'\n    ff(ins+['-filter_complex',fc,'-map','0:v','-map','[a]','-t',f'{total:.2f}','-c:v','copy','-c:a','aac','-b:a','192k',str(out/'reel.mp4')])\n    meta={'duration':round(total,1),'speed':SPEED,'filename':f\"{sc['id']}-reel.mp4\",'voice':True,'music':music.exists(),'style':'vox','scenes':[{'vo':s['vo']} for s in sc['scenes']]}\n    json.dump(meta,open(out/'reel_meta.json','w'),ensure_ascii=False,indent=1); print('done',total)\nasyncio.run(main(sys.argv[1],sys.argv[2]))\n",
+ "voxTemplate": "<!doctype html>\n<html lang=\"vi\"><head><meta charset=\"utf-8\"><title>vox</title>\n<style>\n/*FONTS*/\n:root{--ink:#1a1a1a;--yel:#F2B705;--red:#E4572E;--navy:#14254A;--paper:#F4ECD8}\n*{box-sizing:border-box}html,body{margin:0;background:#000}\n#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(circle at 50% 40%,#F8F1DF 0%,#F1E7CE 65%,#E6DAB9 100%);font-family:'Be Vietnam Pro',sans-serif;color:var(--ink)}\n#noise{position:absolute;inset:0;opacity:.22;mix-blend-mode:multiply;pointer-events:none;z-index:50}\n#grid{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(20,37,74,.05) 0 2px,transparent 2px 64px);z-index:0}\n#logo{position:absolute;left:44px;top:44px;width:132px;height:132px;z-index:40}\n#kick{position:absolute;right:50px;top:78px;font-weight:800;font-size:38px;letter-spacing:4px;color:var(--navy);z-index:40;text-align:right}\n#kick:after{content:\"\";display:block;height:8px;margin-top:8px;background:var(--yel);border-radius:6px;width:100%}\n#world{position:absolute;inset:0;z-index:10}\n.scene{position:absolute;inset:0;display:none}.scene.on{display:block}\n.serif{font-family:'Noto Serif',serif;font-weight:800}\n.abs{position:absolute}\n.mk{background:linear-gradient(100deg,rgba(242,183,5,.95),rgba(242,183,5,.85)) no-repeat 0 78%/0% 62%;padding:0 10px;margin:0 -10px;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}\nsvg.d{position:absolute;overflow:visible;pointer-events:none}\nsvg.d path{fill:none;stroke-linecap:round;stroke-linejoin:round}\n#sub{position:absolute;left:40px;right:40px;top:1560px;height:260px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:68px;line-height:1.3;z-index:30}\n#sub span.w{display:inline-block;padding:0 8px;border-radius:10px}\n#sub span.on{background:var(--yel)}\n.card{background:#FFFBF0;border:7px solid var(--ink);border-radius:34px;box-shadow:12px 12px 0 var(--ink)}\n.lbl{position:absolute;text-align:center;font-weight:800;transform-origin:50% 100%}\n</style></head><body>\n<div id=\"stage\">\n<div id=\"grid\"></div>\n<svg id=\"noise\" width=\"1080\" height=\"1920\"><filter id=\"nf\"><feTurbulence type=\"fractalNoise\" baseFrequency=\".9\" numOctaves=\"2\" seed=\"4\"/><feColorMatrix values=\"0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .55 0\"/></filter><rect width=\"1080\" height=\"1920\" filter=\"url(#nf)\"/></svg>\n<img id=\"logo\"><div id=\"kick\"></div>\n<div id=\"world\"></div>\n<div id=\"sub\"></div>\n</div>\n<script>\nconst D=/*DATA*/{};\nconst clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),ease=p=>1-Math.pow(1-p,3),back=p=>{const c=1.70158;return 1+(c+1)*Math.pow(p-1,3)+c*Math.pow(p-1,2)};\nconst pr=(t,t0,d)=>clamp((t-t0)/d);\nconst esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));\ndocument.getElementById('logo').src=D.logo;\nconst W=document.getElementById('world');\n// svg helpers: hand-drawn path with stroke animation\nfunction svg(x,y,w,h,paths,id){return `<svg class=\"d\" id=\"${id}\" style=\"left:${x}px;top:${y}px\" width=\"${w}\" height=\"${h}\" viewBox=\"0 0 ${w} ${h}\">${paths}</svg>`}\nfunction P(d,col,sw){return `<path d=\"${d}\" stroke=\"${col}\" stroke-width=\"${sw}\" pathLength=\"1\" stroke-dasharray=\"1\" stroke-dashoffset=\"1\"/>`}\nfunction draw(id,p){const e=document.getElementById(id);if(!e)return;e.querySelectorAll('path').forEach((q,k)=>{const n=e.querySelectorAll('path').length;const pp=clamp(p*n-k);q.style.strokeDashoffset=1-pp})}\nfunction wob(w,amp=6,seg=6){let d=`M0 ${amp}`;for(let i=1;i<=seg;i++)d+=` Q${(i-.5)*w/seg} ${i%2?-amp:amp*2.2} ${i*w/seg} ${amp}`;return d}\nfunction circ(w,h){return `M${w*.5} 6 C${w*.95} 0 ${w} ${h*.8} ${w*.5} ${h-4} C${w*.05} ${h+2} -4 ${h*.2} ${w*.62} 10 C${w*.8} 14 ${w*.9} 20 ${w*.93} 30`}\nfunction arrowD(x1,y1,x2,y2){const a=Math.atan2(y2-y1,x2-x1),L=46;const h=(s)=>`M${x2} ${y2} L${x2-L*Math.cos(a+s)} ${y2-L*Math.sin(a+s)}`;return `M${x1} ${y1} Q${(x1+x2)/2+30} ${(y1+y2)/2-20} ${x2} ${y2} ${h(.5)} ${h(-.5)}`}\nfunction pop(el,p){el.style.opacity=Math.min(1,p*2.5);el.style.transform=`scale(${.4+.6*back(p)})`}\nfunction fadeUp(el,p){el.style.opacity=p;el.style.transform=`translateY(${(1-ease(p))*50}px)`}\nfunction mark(el,p){el.style.backgroundSize=`${ease(p)*100}% 62%`}\nconst S=[];\nconst SENT=D.words;\n// ---------- builders ----------\nfunction build(s,i){\n const id='s'+i;let h='';\n if(s.t==='hook'){h=`<div class=\"abs serif\" id=\"${id}a\" style=\"left:60px;right:60px;top:430px;font-size:132px;line-height:1.1;text-align:center;text-transform:uppercase\">${esc(s.a)}<br>TIẾNG ANH</div>\n <div class=\"abs serif\" id=\"${id}b\" style=\"left:60px;right:60px;top:880px;font-size:112px;color:var(--red);text-align:center;text-transform:uppercase\">${esc(s.b)}</div>\n <div class=\"abs serif\" id=\"${id}c\" style=\"left:40px;right:40px;top:1040px;font-size:132px;text-align:center;text-transform:uppercase\"><span class=\"mk\" id=\"${id}m\">“${esc(s.c)}”</span></div>`+svg(110,1210,860,40,P(wob(860,9,9),'#E4572E',14),id+'u')}\n if(s.t==='bars'){\n  const n=SENT.length,cw=148,x0=(1080-n*cw)/2;\n  h=`<div class=\"abs\" style=\"left:${x0-10}px;top:1290px;width:${n*cw+20}px;height:10px;background:var(--ink);border-radius:6px\"></div>`;\n  SENT.forEach((w,k)=>{h+=`<div class=\"abs\" id=\"${id}b${k}\" style=\"left:${x0+k*cw+16}px;width:${cw-32}px;bottom:630px;height:200px;background:var(--navy);border-radius:18px 18px 4px 4px;transform-origin:50% 100%\"></div>\n  <div class=\"lbl\" id=\"${id}l${k}\" style=\"left:${x0+k*cw-8}px;width:${cw+16}px;top:1320px;font-size:42px\"><span class=\"mk\" id=\"${id}k${k}\">${esc(w)}</span></div>`});\n  h+=svg(x0,520,n*cw,700,[1,4,6].map((k,j)=>P(circ(cw+10,150),'#E4572E',10)).join('')+'',id+'c0');\n  h+=`<div class=\"abs serif\" id=\"${id}t\" style=\"left:60px;right:60px;top:300px;text-align:center;font-size:84px;line-height:1.15\"></div>\n  <div class=\"abs serif\" id=\"${id}x\" style=\"left:200px;top:520px;width:680px;text-align:center;font-size:120px;color:var(--red);border:12px solid var(--red);border-radius:24px;padding:10px;transform:rotate(-8deg);opacity:0\">ROBOT!</div>`;\n  [1,4,6].forEach(k=>{h+=svg(x0+k*cw-5,0,cw+10,160,P(circ(cw+10,150),'#E4572E',10),id+'o'+k)});\n  h+=svg(x0+n*cw/2-140,1450,280,90,'','');\n }\n if(s.t==='rule'){\n  h=`<div class=\"abs card\" id=\"${id}A\" style=\"left:70px;right:70px;top:380px;height:500px;padding:50px 56px\"><div class=\"serif\" style=\"font-size:96px;text-transform:uppercase\">${esc(s.a)}</div><div style=\"font-size:120px;font-weight:900;color:var(--red);margin-top:30px\">NHẤN ↑</div></div>\n  <div class=\"abs card\" id=\"${id}B\" style=\"left:70px;right:70px;top:960px;height:500px;padding:50px 56px;background:#EFE6CC\"><div class=\"serif\" style=\"font-size:96px;text-transform:uppercase;opacity:.7\">${esc(s.b)}</div><div style=\"font-size:120px;font-weight:900;color:var(--navy);margin-top:30px;opacity:.75\">YẾU ↓</div></div>`+svg(60,300,960,160,P(wob(900,10,8),'#F2B705',18),id+'u1');\n }\n if(s.t==='chips'){\n  h=s.items.map((it,k)=>`<div class=\"abs card\" id=\"${id}c${k}\" style=\"left:${k%2?560:70}px;top:${420+Math.floor(k/2)*520}px;width:450px;height:440px;padding:40px 30px;text-align:center;${s.weak?'background:#EFE6CC;':''}\"><div style=\"font-weight:800;font-size:44px;color:var(--navy);letter-spacing:2px\">${it.vi}</div><div class=\"serif\" style=\"font-size:${s.weak?150:98}px;margin-top:${s.weak?40:70}px;${s.weak?'opacity:.5;':''}\"><span class=\"mk\" id=\"${id}m${k}\">${esc(it.en)}</span></div></div>`).join('');\n }\n if(s.t==='weakcards'){\n  h=s.items.map((it,k)=>`<div class=\"abs card\" id=\"${id}c${k}\" style=\"left:70px;right:70px;top:${360+k*400}px;height:340px;display:flex;align-items:center;justify-content:space-between;padding:0 64px\"><div class=\"serif\" style=\"font-size:150px;opacity:.55\">${esc(it.w)}</div><div style=\"font-size:90px;color:var(--red);font-weight:900\">→</div><div class=\"serif\" style=\"font-size:120px;color:var(--navy)\"><span class=\"mk\" id=\"${id}m${k}\">${esc(it.ipa)}</span></div></div>`).join('');\n }\n if(s.t==='checks'){\n  const W1=SENT.map(w=>`<span>${esc(w.toUpperCase())}</span>`).join(' ');\n  const W2=SENT.map((w,k)=>[1,4,6].includes(k)?`<span class=\"serif\" style=\"font-size:94px;color:var(--red)\">${esc(w.toUpperCase())}</span>`:`<span style=\"font-size:46px;opacity:.5\">${esc(w)}</span>`).join(' ');\n  h=`<div class=\"abs card\" id=\"${id}r0\" style=\"left:70px;right:70px;top:380px;height:520px;padding:44px 50px;display:flex;align-items:center\"><div class=\"serif\" style=\"font-size:70px;line-height:1.35;word-spacing:10px\">${W1}</div></div>`+svg(60,330,150,150,P('M20 20 L130 130 M130 20 L20 130','#E4572E',22),id+'x')\n  +`<div class=\"abs card\" id=\"${id}r1\" style=\"left:70px;right:70px;top:1000px;height:520px;padding:44px 50px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;word-spacing:14px;gap:6px;flex-wrap:wrap\">${W2}</div>`+svg(60,950,150,150,P('M20 80 L60 120 L130 30','#1FA45B',22),id+'k');\n }\n if(s.t==='tip'){\n  h=[0,1,2].map(k=>`<div class=\"abs\" id=\"${id}b${k}\" style=\"left:${150+k*300}px;bottom:620px;width:200px;height:${460}px;background:var(--navy);border-radius:26px 26px 4px 4px;transform-origin:50% 100%\"></div>`).join('')\n  +[0,1,2].map(k=>svg(110+k*300,520,280,280,P('M140 10 A130 130 0 1 1 139 10','#E4572E',12),id+'r'+k)).join('')\n  +`<div class=\"abs serif\" id=\"${id}t\" style=\"left:60px;right:60px;top:1360px;text-align:center;font-size:78px;white-space:nowrap;color:var(--red)\">TẠCH · TẠCH · TẠCH</div>`;\n }\n if(s.t==='list'){\n  h=s.items.map((it,k)=>`<div class=\"abs\" id=\"${id}i${k}\" style=\"left:70px;right:60px;top:${380+k*400}px;display:flex;align-items:center;gap:36px\"><div class=\"serif\" style=\"flex:none;width:190px;height:190px;border:8px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:120px;background:var(--yel)\">${k+1}</div><div class=\"serif\" style=\"font-size:78px;line-height:1.2\"><span class=\"mk\" id=\"${id}m${k}\">${esc(it.text)}</span></div></div>`).join('');\n }\n if(s.t==='cta1'){\n  h=`<div class=\"abs card\" id=\"${id}c\" style=\"left:70px;right:70px;top:420px;height:600px;padding:60px 50px;text-align:center\"><div class=\"serif\" style=\"font-size:104px;line-height:1.3\">${s.sentence.map((w,k)=>`<span id=\"${id}w${k}\" style=\"display:inline-block;margin:0 10px\">${esc(w)}</span>`).join(' ')}</div></div>\n  <div class=\"abs serif\" id=\"${id}q\" style=\"left:60px;right:60px;top:1130px;text-align:center;font-size:140px;color:var(--red)\">NHẤN TỪ NÀO?</div>`+svg(300,1300,480,100,P(wob(480,10,6),'#F2B705',20),id+'u');\n }\n if(s.t==='cta2'){\n  h=`<div class=\"abs card\" id=\"${id}c\" style=\"left:70px;right:70px;top:430px;height:420px;padding:60px 50px;display:flex;align-items:center;justify-content:center;text-align:center\"><div class=\"serif\" style=\"font-size:96px;line-height:1.2\">${esc(s.text)}</div></div>\n  <div class=\"abs serif\" id=\"${id}s\" style=\"left:60px;right:60px;top:1000px;text-align:center;font-size:92px;color:var(--navy)\"><span class=\"mk\" id=\"${id}m\">${esc(s.sub)} ▶</span></div>`+svg(300,1270,480,200,P(arrowD(120,10,320,170),'#E4572E',16),id+'a');\n }\n if(s.t==='end'){\n  h=`<img class=\"abs\" id=\"${id}l\" src=\"${D.logo}\" style=\"left:290px;top:420px;width:500px;height:500px\"><div class=\"abs serif\" id=\"${id}e\" style=\"left:60px;right:60px;top:1000px;text-align:center;font-size:96px;line-height:1.25\">Học tiếng Anh không khó,<br><span class=\"mk\" id=\"${id}m\">${esc(D.end.toLowerCase())}!</span></div>`;\n }\n return `<div class=\"scene\" id=\"${id}\">${h}</div>`;\n}\nW.innerHTML=D.scenes.map(build).join('');\n// ---------- subtitles ----------\nconst SUB=document.getElementById('sub');let lastCue=-1;\nfunction subs(t){\n let ci=-1;for(let k=0;k<D.cues.length;k++){if(t>=D.cues[k].s-.02&&t<D.cues[k].e+.15)ci=k}\n if(ci<0){SUB.innerHTML='';lastCue=-1;return}\n const c=D.cues[ci];\n SUB.innerHTML='<div>'+c.w.map(w=>`<span class=\"w ${t>=w.s&&t<w.e+.1?'on':''}\">${esc(w.t)}</span>`).join(' ')+'</div>';\n}\nconst $=id=>document.getElementById(id);\nconst TOP=[1,4,6];\nwindow.render=function(i,t){\n const s=D.scenes[i],T=s.times||{},S0=s.start,E0=s.end,id='s'+i,lt=t-S0;\n document.querySelectorAll('.scene').forEach((el,k)=>el.classList.toggle('on',k===i));\n $('kick').style.display=s.kicker?'block':'none';$('kick').textContent=s.kicker||'';\n $('logo').style.display=s.t==='end'?'none':'block';\n // camera: punch-in at start + slow push\n const z=1+.10*(1-ease(pr(t,S0,.3)))+.03*pr(t,S0,E0-S0);\n W.style.transformOrigin=(s.zo||'50% 45%');W.style.transform=`scale(${z})`;\n if(s.t==='hook'){\n  pop($(id+'a'),pr(t,S0,.35));pop($(id+'b'),pr(t,T.b,.3));pop($(id+'c'),pr(t,T.c,.3));\n  mark($(id+'m'),pr(t,T.c+.1,.55));draw(id+'u',pr(t,T.c+.55,.4));\n  $(id+'c').style.transform+=` rotate(${-2}deg)`;\n }\n if(s.t==='bars'){\n  const n=SENT.length,m=s.mode;\n  let H=[],L=[],O=[],Mk=[];\n  for(let k=0;k<n;k++){\n   let h=480,op=1,ls=42,mk=0,ly=1320;\n   const tw=(T.w&&T.w[k]!=null)?T.w[k]:S0;\n   if(m==='flat'){const ph=(lt-k*.34);h=480+(ph>0&&ph<.25?70*Math.sin(ph/.25*Math.PI):0)}\n   if(m==='robot'){const ph=t-tw;h=480+(ph>0&&ph<.25?90*Math.sin(ph/.25*Math.PI):0)}\n   if(m==='stress'||m==='weak'){\n     const st=TOP.indexOf(k)>=0;const ta=st?pr(t,T['n'+k],.35):0;\n     if(m==='weak'){ h=st?740:(90+60*(1-ease(pr(t,T.f,.5)))); }\n     else h=st?480+260*back(ta):480-240*ease(pr(t,T.n1+.4,.6));\n     if(m==='weak'&&!st){op=1-.55*ease(pr(t,T.f,.5));ls=42-8*ease(pr(t,T.f,.5))}\n     if(st){ls=42+16*(m==='weak'?1:back(ta));ly=1375;mk=m==='weak'?1:pr(t,T['n'+k]+.05,.4)}\n   }\n   H.push(h);L.push([ls,op,ly]);Mk.push(mk);\n  }\n  for(let k=0;k<n;k++){\n   const b=$(id+'b'+k);b.style.height=H[k]+'px';b.style.background=(TOP.includes(k)&&(m==='stress'||m==='weak'))?'#E4572E':'#14254A';b.style.opacity=L[k][1];\n   const l=$(id+'l'+k);l.style.fontSize=L[k][0]+'px';l.style.opacity=L[k][1];l.style.top=L[k][2]+'px';mark($(id+'k'+k),Mk[k]);\n  }\n  const tt=$(id+'t');\n  if(m==='flat'){tt.innerHTML='MỖI CHỮ<br>MỘT NHỊP';tt.style.opacity=pr(t,S0+.2,.3)}\n  else if(m==='robot'){tt.innerHTML='';const x=$(id+'x');const p=pr(t,T.r,.3);x.style.opacity=p;x.style.transform=`rotate(-8deg) scale(${.5+.5*back(p)})`}\n  else if(m==='stress'){tt.innerHTML='CHỈ NHẤN <span style=\"color:var(--red)\">3 TỪ</span>';tt.style.opacity=pr(t,S0+.15,.3)}\n  else {tt.innerHTML='CÒN LẠI: <span style=\"color:var(--navy)\">NHẸ · NHANH ↓</span>';tt.style.opacity=pr(t,S0+.2,.3)}\n  if(m!=='robot'){const x=$(id+'x');if(x)x.style.opacity=0}\n  TOP.forEach(k=>{ const o=$(id+'o'+k);if(!o)return;const hh=H[k];o.style.top=(1290-hh-120)+'px';draw(id+'o'+k,(m==='stress'||m==='weak')?pr(t,T['n'+k]+.3,.4):0)});\n  draw(id+'c0',0);\n }\n if(s.t==='rule'){\n  pop($(id+'A'),pr(t,T.a,.35));pop($(id+'B'),pr(t,T.b,.35));draw(id+'u1',pr(t,T.a+.2,.5));\n  const u=$(id+'u1');u.style.opacity=t<T.b?1:0;\n }\n if(s.t==='chips'){\n  s.items.forEach((it,k)=>{pop($(id+'c'+k),pr(t,T.i[k],.3));mark($(id+'m'+k),s.weak?0:pr(t,T.i[k]+.15,.45))});\n }\n if(s.t==='weakcards'){\n  s.items.forEach((it,k)=>{const c=$(id+'c'+k);fadeUp(c,pr(t,T.i[k]-.15,.35));mark($(id+'m'+k),pr(t,T.i[k]+.2,.5))});\n }\n if(s.t==='checks'){\n  fadeUp($(id+'r0'),pr(t,T.r[0],.35));fadeUp($(id+'r1'),pr(t,T.r[1],.35));\n  draw(id+'x',pr(t,T.r[0]+.25,.35));draw(id+'k',pr(t,T.r[1]+.25,.35));\n  const r0=$(id+'r0');r0.style.opacity=Math.min(1,pr(t,T.r[0],.35))*(t>T.r[1]?.55:1);\n }\n if(s.t==='tip'){\n  for(let k=0;k<3;k++){const t0=T.a+k*.7;const ph=t-t0;const b=$(id+'b'+k);b.style.height=(460-(ph>0&&ph<.3?140*Math.sin(ph/.3*Math.PI):0))+'px';b.style.opacity=pr(t,S0,.3);draw(id+'r'+k,pr(t,t0,.5))}\n  const tt=$(id+'t');tt.style.opacity=pr(t,T.a+.3,.3);\n }\n if(s.t==='list'){\n  s.items.forEach((it,k)=>{fadeUp($(id+'i'+k),pr(t,T.i[k]-.1,.35));mark($(id+'m'+k),pr(t,T.i[k]+.5,.6))});\n }\n if(s.t==='cta1'){\n  pop($(id+'c'),pr(t,S0,.35));s.sentence.forEach((w,k)=>{const e=$(id+'w'+k);e.style.opacity=pr(t,T.w[k],.2)});\n  const q=$(id+'q');pop(q,pr(t,T.q,.35));q.style.transform+=` rotate(${Math.sin(t*6)*2}deg)`;draw(id+'u',pr(t,T.q+.3,.4));\n }\n if(s.t==='cta2'){\n  pop($(id+'c'),pr(t,S0,.35));fadeUp($(id+'s'),pr(t,T.s,.35));mark($(id+'m'),pr(t,T.s+.2,.5));draw(id+'a',pr(t,S0+.5,.5));\n }\n if(s.t==='end'){\n  pop($(id+'l'),pr(t,S0,.5));fadeUp($(id+'e'),pr(t,S0+.35,.4));mark($(id+'m'),pr(t,S0+1.1,.6));\n }\n subs(t);\n return true;\n};\n</script></body></html>\n",
+ "weekNote": "Anh Tuấn 1/11: reel Vox posts/2026-11-02-vox dùng cho sáng thứ 2 2/11. Tuần 2–6/11 chỉ làm reel thứ 4 (4/11) và thứ 6 (6/11); thứ 2 2/11 KHÔNG làm thêm reel mới (nếu lịch chạy vào thứ 2 thì chỉ xử lý reel 'can-sua' nếu có rồi dừng)."
+}

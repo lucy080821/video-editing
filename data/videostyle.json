@@ -1,0 +1,74 @@
+{
+ "appliesTo": "Mọi video dài dạng edutainment / giải đề / dạy kiến thức thi (hướng chính của kênh từ 10/11/2026). Video kể chuyện lịch sử, nguồn gốc thuần túy (không giải đề) có thể giữ Vox giấy kem nếu hợp hơn, nhưng ưu tiên bảng phấn.",
+ "decidedAt": "2026-11-10",
+ "decidedBy": "anh Tuấn",
+ "landscapeLayout": "Khổ ngang cho phép chia 2 cột: bên trái câu/đề và chip từ, bên phải hình minh họa hoặc bảng tóm tắt; phần đề thi có thể hiện như tờ đề dán lên bảng. Chữ đủ to để xem trên điện thoại (tiêu đề ≥ 90px, câu tiếng Anh ≥ 60px, phụ đề ≥ 54px ở 1080p).",
+ "longVideoRules": [
+  "Mỗi phần (chapter) có thẻ tiêu đề phấn lớn + lau bảng chuyển phần; giữ nhịp ngắt + nhạc nâng lên giữa các phần như quy định video dài.",
+  "Hình chuyển động liên tục: không để một khung đứng yên quá 4–5 giây; mỗi câu đọc có ít nhất một chuyển động khớp lời (chip trượt, tô vàng, dấu tick...).",
+  "Đa dạng hình minh họa và hiệu ứng giữa các phần, không lặp đúng một cảnh suốt video.",
+  "Thumbnail cũng dùng nền bảng phấn xanh + khung gỗ, chữ phấn to, từ khóa vàng, con dấu SAI/ĐÚNG.",
+  "Ghi style:\"chalkboard\" và trường visual (kit, palette, animations, transitions, images, fonts, music) vào document video."
+ ],
+ "look": {
+  "animations": [
+   "kinetic slam từng từ tiêu đề",
+   "chip morph + mũi tên vẽ dần",
+   "lật thẻ 3D",
+   "con dấu SAI + rung",
+   "vẽ nét SVG (stroke-dashoffset)",
+   "gõ máy",
+   "kim đồng hồ quay",
+   "checklist tick + thanh tiến độ",
+   "đếm ngược vòng tròn",
+   "pháo giấy",
+   "tô vàng quét qua từ"
+  ],
+  "elements": [
+   "Tiêu đề phấn in hoa, từ khóa màu vàng to",
+   "Câu sai trong khung nét đứt bị gạch đỏ + con dấu SAI đỏ đóng xuống rung; câu đúng trong khung xanh ngọc trượt vào",
+   "Chip từ (I'm sure | that man | is | a doctor) tách ra, mũi tên phấn cong, ghép lại thành câu mới với từ đổi màu vàng",
+   "Nhân vật và đồ vật SVG nét phấn tô màu phẳng (thám tử + kính lúp, bác sĩ, ngôi nhà, đồng hồ, biển cấm...)",
+   "Nhãn dán giấy nghiêng (vàng, hồng) cho từ gợi ý",
+   "Đồng hồ quay kim + timeline QUÁ KHỨ → BÂY GIỜ cho thì",
+   "Khung MẸO NHỚ có checklist tick + thanh tiến độ",
+   "THỬ THÁCH: đếm ngược vòng tròn 3-2-1, câu điền chỗ trống, 2 nút đáp án",
+   "Thẻ các bước (1. NHÌN, 2. GẠCH, 3. GHÉP, 4. SOÁT) màu khác nhau bật vào",
+   "Cảnh kết: logo + HỌC TIẾNG ANH KHÔNG KHÓ + pháo giấy"
+  ],
+  "fonts": [
+   "Anton (tiêu đề in hoa kiểu phấn)",
+   "Patrick Hand (câu tiếng Anh viết tay)",
+   "Be Vietnam Pro (phụ đề, nhãn tiếng Việt)"
+  ],
+  "frame": "Bảng phấn xanh đen (#1e3d38, có vệt phấn mờ, vân nhẹ, vignette) nằm ngang, khung gỗ nâu bao quanh; logo Tiếng Anh Không Khó nhỏ ở góc trên trái.",
+  "music": "Nhạc nền nhẹ không lời; đổi thể loại theo từng video, giữ nhỏ dưới giọng đọc.",
+  "palette": [
+   "#1e3d38 nền bảng",
+   "#f4f1e8 chữ phấn trắng",
+   "#F2B705 vàng nhấn/tô từ khóa",
+   "#ff7a8a hồng-đỏ cho SAI/không",
+   "#6fe0c0 xanh ngọc cho ĐÚNG/có",
+   "#8ecbff xanh dương cho thời gian/quá khứ"
+  ],
+  "sfx": "Mỗi chuyển cảnh, highlight, chuyển động đều có SFX (phấn viết, lau bảng, whoosh, pop, stamp, buzz, ding, tick, kim đồng hồ).",
+  "subtitles": "Phụ đề to ở dải dưới (trong khung bảng), tô vàng từng từ đang đọc, chữ trắng đậm có viền tối.",
+  "transitions": [
+   "lau bảng ngang/dọc (khăn lau phấn quét)",
+   "whip pan",
+   "lật 3D",
+   "zoom through",
+   "trượt lên"
+  ]
+ },
+ "reference": {
+  "contactSheetAssetIds": [
+   "83e0e8ed14d497bdc71475b000de7e51",
+   "a66f01110459eb0271e3e7e4d4b01bf7"
+  ],
+  "howToView": "Artifact action read, url trang duyệt bài, path = asset id → lưu file; xem 2 ảnh contact sheet bằng Read; có thể cắt thêm khung hình từ mp4 bằng ffmpeg. Đọc posts/2026-11-11 trường visual, reel.scenes, reel.sfxMarks.",
+  "reelDocId": "2026-11-11",
+  "reelVideoAssetId": "e15286aa994452692cc0c064991fbb84"
+ },
+ "rule": "NGOẠI LỆ ƯU TIÊN NHẤT (anh Tuấn chốt 25/11/2026): nếu mục meta/plan kind \"video\" cho ngày hôm nay có trường \"style\" hoặc outline ghi phong cách riêng (vd \"documentary-vox-motion\" = documentary kết hợp Vox và motion graphic như video posts/2026-11-01), thì làm ĐÚNG phong cách đó thay cho bảng phấn xanh; các quy tắc khác (intro, SFX, tên file SEO, cấm tên Lan, phần thưởng, thumbnail) vẫn giữ. Còn lại: Làm video dài theo phong cách BẢNG PHẤN XANH NẰM NGANG (16:9, 1920×1080) giống reel mẫu posts/2026-11-11 (Viết lại câu với must), chuyển sang khổ ngang, với hiệu ứng chuyển động liên tục như reel đó. TÊN FILE CHUẨN SEO (anh Tuấn chốt 12/11/2026, BẮT BUỘC): mọi file video dài (bản đầy đủ và bản xem trước), phụ đề, mục lục và thumbnail khi tạo xong phải đặt tên chứa từ khóa chính, viết không dấu, chữ thường, nối bằng gạch ngang, có thể thêm hậu tố loại file; vd từ khóa \"cách học viết tiếng anh\" → cach-hoc-viet-tieng-anh.mp4, cach-hoc-viet-tieng-anh-preview.mp4, cach-hoc-viet-tieng-anh.srt, cach-hoc-viet-tieng-anh-thumbnail.png. KHÔNG dùng tên chung chung như video.mp4, preview.mp4, thumbnail.png, subtitles.srt. Đổi tên TRƯỚC khi tải lên trang duyệt (asset) và trước khi gửi bằng SendUserFile; ghi đúng tên này vào trường filename của document. INTRO KÊNH (anh Tuấn chốt 7/11/2026, BẮT BUỘC): mọi video dài phải ghép intro 13 giây ở đầu theo meta/introrule; nối bằng hiệu ứng mờ dần 0,7 giây (xfade fade, acrossfade), chèn 0,6 giây giữ khung đầu + im lặng trước phần nội dung để câu đọc đầu không bị mất; dời mọi mốc phụ đề và mục lục thêm khoảng 12,9 giây và thêm dòng \"0:00 Intro\" ở đầu mục lục. CẤM DÙNG TÊN \"LAN\" (anh Tuấn chốt 25/11/2026, BẮT BUỘC, KHÔNG có ngoại lệ): mọi video dài, thumbnail, phụ đề, mô tả SEO, câu ví dụ, câu đề, bài tập, đáp án, phần thưởng, nhân vật SVG/hội thoại đều KHÔNG được dùng tên \"Lan\" (kể cả Mrs Lan, Ms Lan, cô Lan, chị Lan…). Dùng tên khác (vd Mai, Nam, Vy, Linh, Minh, Hoa, Tom, Anna). Trước khi tải lên phải tìm chữ \"Lan\" trong kịch bản, phụ đề, SEO và chữ trên hình; nếu có thì sửa và dựng lại."
+}

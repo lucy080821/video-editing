@@ -1,0 +1,53 @@
+{
+ "entries": [
+  {
+   "docId": "2026-10-15",
+   "hoursAfterPost": 9,
+   "kind": "reel",
+   "lessons": [
+    "Chủ đề quá hẹp: một hậu tố đơn lẻ, ít người chủ động tìm. Gợi ý tìm kiếm YouTube cho 'đuôi ous' trả về rỗng (kiểm tra 2026-10-15).",
+    "Từ khóa chính không đến từ dữ liệu gợi ý tìm kiếm; cần chọn cụm người học thật sự gõ (vd. 'phát âm tiếng anh cơ bản', 'phát âm tiếng anh cho người mới bắt đầu', 'phát âm tiếng anh chuẩn ipa').",
+    "Tiêu đề YouTube dùng con số không có nguồn ('90% người Việt'): không được bịa số liệu.",
+    "TikTok 0 view sau 9 giờ thường là do video bị giữ duyệt/hạn chế phân phối, không chỉ do từ khóa."
+   ],
+   "primaryKeyword": "cách đọc đuôi ous",
+   "reportedAt": "2026-10-15T20:00:00+07:00",
+   "topic": "Phát âm đuôi -ous (famous, nervous, delicious)",
+   "verdict": "flop",
+   "views": {
+    "facebookReels": 125,
+    "tiktok": 0,
+    "youtubeShorts": 52
+   }
+  },
+  {
+   "docId": "2026-10-22",
+   "kind": "reel",
+   "lessons": [
+    "Hook mở bằng từ khóa chính + một lỗi đọc cụ thể viết kiểu tiếng Việt ('Đừng đọc looked là lúc-kịt nữa nha!').",
+    "Không gắn nhãn series.",
+    "Cùng mạch chủ đề với video dài ngay sau (động từ bất quy tắc 23/10) nên reel và video dài đẩy view cho nhau; anh Tuấn nói reel này bổ sung view rất tốt cho video dài."
+   ],
+   "primaryKeyword": "cách phát âm đuôi ed",
+   "reportedAt": "2026-10-31T09:45:00+07:00",
+   "topic": "Cách phát âm đuôi ed (/ɪd/, /t/, /d/; đừng đọc looked là lúc-kịt)",
+   "verdict": "tot",
+   "views": {
+    "total": "khoảng 1.400"
+   }
+  },
+  {
+   "docId": "2026-10-28, 2026-10-29-2, 2026-10-30",
+   "kind": "reel",
+   "lessons": [
+    "Cả 3 tập flop (anh Tuấn báo, chưa có số view cụ thể).",
+    "Hook mở bằng nhãn '#N · Người Việt Hay Sai', CTA 'follow để xem tập sau', chủ đề rời rạc theo từng ngày, không gắn với video dài.",
+    "Quyết định 31/10: bỏ series, chuyển sang reel vệ tinh gắn với video dài, hook theo công thức reel đuôi -ed."
+   ],
+   "reportedAt": "2026-10-31T09:45:00+07:00",
+   "topic": "Series Người Việt Hay Sai #1 (đuôi s/es), #2 (i ngắn/i dài), #3 (câu hỏi đuôi)",
+   "verdict": "flop"
+  }
+ ],
+ "note": "Kết quả thực tế anh Tuấn báo lại sau khi đăng. Mỗi lần chạy phải đọc để rút kinh nghiệm: tránh lặp kiểu chủ đề/hook/từ khóa đã flop, ưu tiên kiểu đã chạy tốt."
+}

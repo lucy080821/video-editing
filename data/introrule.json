@@ -1,0 +1,18 @@
+{
+ "decidedAt": "2026-11-07",
+ "decidedBy": "anh Tuấn",
+ "howTo": [
+  "Dựng video dài như bình thường (voice, nhạc, nhịp ngắt) thành video.mp4.",
+  "Tải intro: Artifact read url trang duyệt, path c27c776c8b24172c05ff3db50376d236 (lưu ra ~/doc/intro.mp4).",
+  "Ghép: ffmpeg -i intro.mp4 -i video.mp4 -filter_complex \"[0:v]fps=25,scale=1920:1080,setsar=1,format=yuv420p[v0];[1:v]fps=25,scale=1920:1080,setsar=1,format=yuv420p[v1];[0:a]aresample=44100,aformat=channel_layouts=stereo[a0];[1:a]aresample=44100,aformat=channel_layouts=stereo[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]\" -map [v] -map [a] -c:v libx264 -preset medium -crf 21 -c:a aac -b:a 160k -movflags +faststart final.mp4 (nếu video khác 1920×1080 thì scale theo video).",
+  "Dời +13 giây mọi mốc trong chapters.txt và subtitles.srt; thêm dòng đầu '0:00 Intro kênh Tiếng Anh Không Khó' (mục lục YouTube cần bắt đầu từ 0:00, mỗi mục ≥10 giây).",
+  "Preview <15 MB làm từ video ĐÃ ghép intro; duration trong document = tổng đã ghép; video_meta/pauses/độ dài kiểm tra theo bản chưa ghép intro (khoảng giới hạn độ dài của lịch áp dụng cho phần nội dung, không tính 13 giây intro).",
+  "Ghi vào document video: video.introSeconds = 13; gửi bản đã ghép intro qua SendUserFile."
+ ],
+ "introAssetId": "c27c776c8b24172c05ff3db50376d236",
+ "introSeconds": 13,
+ "introSpec": "1920×1080, 30 fps, 13 giây, âm thanh AAC; file intro_tieng_anh_khong_kho_v3.mp4 đã lưu làm tài sản của trang duyệt (tải bằng Artifact action read với path = introAssetId).",
+ "introUrl": "/_blob/c27c776c8b24172c05ff3db50376d236",
+ "rule": "Từ 7/11/2026 (anh Tuấn yêu cầu): MỌI video dài phải có intro kênh (13 giây, kiểu Vox, nhạc + SFX) ghép ở ĐẦU video, trước phần mở đầu của từng video.",
+ "sources": "Dựng bởi phiên 7/11/2026; mã nguồn HTML/SVG của intro: không lưu (có thể dựng lại theo mô tả: logo xoay + 5 thẻ Video dài / Reel ngắn / Ngữ pháp / Mẹo thi vào 10 / Luyện tập + nút Đăng ký kênh)."
+}
