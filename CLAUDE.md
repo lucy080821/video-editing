@@ -13,7 +13,8 @@ Quy tắc của anh Tuấn, chốt ngày 26/11/2026.
 Cả hai lịch đều chạy ngay trong phiên này.
 
 - **21h tối Chủ nhật đến thứ 5:** làm 1 reel quảng bá cho video dài của thứ 7 gần nhất trước ngày đăng. Reel đăng vào ngày hôm sau, tức thứ 2 đến thứ 6.
-- **21h tối thứ 6:** làm video dài để đăng thứ 7 hôm sau.
+- **20h tối thứ 4:** lịch "Đề xuất chủ đề video dài" chạy trong một phiên riêng và đề xuất 3 chủ đề kèm từ khóa, tiêu đề và dàn ý. Kết quả được gửi email cho anh Tuấn, đồng thời gửi tin nhắn "[Đề xuất chủ đề video dài thứ 7 …]" vào phiên này. Anh Tuấn chốt chủ đề bằng cách nhắn trong phiên này. Khi anh chốt, ghi chủ đề vào `data/plan.json` với status `approved`.
+- **21h tối thứ 6:** làm video dài để đăng thứ 7 hôm sau. Thứ tự chọn chủ đề: mục `approved` trong plan, rồi đến chủ đề anh đã chốt trong phiên. Nếu anh chưa chốt thì làm chủ đề 1 và nói rõ điều đó.
 - **Không làm trùng:** nếu `data/catalog.json` đã có video cùng loại cho ngày đăng đó thì không làm thêm, chỉ báo lại cho anh Tuấn.
 
 ## Dữ liệu (lưu trong repo này)
