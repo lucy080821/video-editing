@@ -17,7 +17,7 @@ Quy tắc của anh Tuấn, chốt ngày 26/11/2026.
 
 Cả hai lịch đều chạy ngay trong phiên này.
 
-- **21h tối thứ 2 đến thứ 5:** làm 1 reel quảng bá cho video dài của thứ 7 hôm trước. Reel đăng vào ngày hôm sau, tức thứ 3 đến thứ 6.
+- **21h tối Chủ nhật đến thứ 5:** làm 1 reel quảng bá cho video dài của thứ 7 gần nhất trước ngày đăng. Reel đăng vào ngày hôm sau, tức thứ 2 đến thứ 6.
 - **21h tối thứ 6:** làm video dài để đăng thứ 7 hôm sau.
 - **Không làm trùng:** nếu ngày đăng đã có video cùng loại thì không làm thêm, chỉ báo lại cho anh Tuấn.
 - **Bộ công cụ dựng video** nằm trong thư mục `tools/`. Xem `tools/README.md` để biết cách dùng.
