@@ -13,6 +13,15 @@ Quy tắc của anh Tuấn, chốt ngày 26/11/2026.
   - meta/videos, meta/reels: các chủ đề đã làm.
   - posts: từng video hoặc reel.
 
+## Lịch làm video
+
+Cả hai lịch đều chạy ngay trong phiên này.
+
+- **21h tối thứ 2 đến thứ 5:** làm 1 reel quảng bá cho video dài của thứ 7 hôm trước. Reel đăng vào ngày hôm sau, tức thứ 3 đến thứ 6.
+- **21h tối thứ 6:** làm video dài để đăng thứ 7 hôm sau.
+- **Không làm trùng:** nếu ngày đăng đã có video cùng loại thì không làm thêm, chỉ báo lại cho anh Tuấn.
+- **Bộ công cụ dựng video** nằm trong thư mục `tools/`. Xem `tools/README.md` để biết cách dùng.
+
 ## SEO bắt buộc cho mỗi video
 
 1. Tiêu đề phải chứa từ khóa SEO chính, lấy từ gợi ý tìm kiếm của YouTube hoặc Google.
