@@ -13,8 +13,8 @@ Quy tắc của anh Tuấn, chốt ngày 26/11/2026.
 Cả hai lịch đều chạy ngay trong phiên này.
 
 - **21h tối Chủ nhật đến thứ 5:** làm 1 reel quảng bá cho video dài của thứ 7 gần nhất trước ngày đăng. Reel đăng vào ngày hôm sau, tức thứ 2 đến thứ 6.
-- **20h tối thứ 4:** đề xuất 3 chủ đề video dài (từ khóa lấy từ gợi ý tìm kiếm thật, tiêu đề, dàn ý, phần thưởng) và **gửi email** qua Gmail tới tahoanganhtuan1996@gmail.com, tiêu đề "[Duyệt chủ đề video dài] Thứ 7 ngày DD/MM/YYYY". Ghi đề xuất và threadId vào `data/proposals/<ngày thứ 7>.json`.
-- **Anh Tuấn chốt chủ đề** bằng cách **trả lời email** đó (ví dụ "chốt 2" hoặc "chủ đề 1, sửa …"), hoặc nhắn trong phiên này, trước 21h thứ 6.
+- **Sáng thứ 6 (khoảng 7h45):** đề xuất 3 chủ đề video dài (từ khóa lấy từ gợi ý tìm kiếm thật, tiêu đề, dàn ý, phần thưởng) và **gửi email** qua Gmail tới tahoanganhtuan1996@gmail.com, tiêu đề "[Duyệt chủ đề video dài] Thứ 7 ngày DD/MM/YYYY". Ghi đề xuất và threadId vào `data/proposals/<ngày thứ 7>.json`.
+- **Anh Tuấn chốt chủ đề** bằng cách **trả lời email** đó (ví dụ "chốt 2" hoặc "chủ đề 1, sửa …"), hoặc nhắn trong phiên này, trước 21h tối thứ 6 cùng ngày.
 - **21h tối thứ 6:** làm video dài để đăng thứ 7 hôm sau. Thứ tự chọn chủ đề:
   1. Mục `approved` trong `data/plan.json`.
   2. Email trả lời của anh Tuấn trong thread đề xuất.
